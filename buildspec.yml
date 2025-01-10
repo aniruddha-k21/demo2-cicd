@@ -5,6 +5,7 @@ version: 0.2
 env:
   variables:
     TEST_VAR: "t2.micro"
+
 phases:
   install:
     commands:
@@ -34,3 +35,8 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
